@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     
+    <title>Ninja Wong</title>
+    <style>
+    h2, p{
+        margin: 10px 0;
+    }
+    header{
+        margin-bottom: 40px;
+    }
+        
+        
+        
+        </style>
+</head>
+<body class="indigo">
+
+    <header class="indigo darken-1 section">
+        <h2 class="center white-text">Ninja Wong</h2>
+        <p class="flow-text grey-text center text-lighten-2"> Monthly Money tracker for ninjas... </p>
+    </header>
+
+    <div class="container section">
+        <div class="row">
+            <div class="col s12 m6">
+                <form class="card z-depth-0">
+                    <div class="card-content">
+                        <span class="card-title indigo-text">Add Item:</span>
+                        <div class="input-field">
+                            <input type="text" id="Name">
+                            <label for="name">Item Name </label>
+                        </div>
+        
+                        <div class="input-field">
+                                    <input type="text" id="cost">
+                                    <label for="name">Item Cost ($) </label>
+                        </div>
+                        <div class="input-field center">
+                                <button class="btn-large pink white-text">Add Item</button>
+                        </div>
+                        <div class="input-field center">
+                                <p class="red-text" id="error"></p>
+                        </div>
+                    </div>
+                </form>
+                <div class="col s12 m5 push-m1"></div>
+                <div class="canvas">
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+    
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBFZEZuHVUJNOopbnW28pNbwZC6josUpW4",
+        authDomain: "udemyproject-4a959.firebaseapp.com",
+        databaseURL: "https://udemyproject-4a959.firebaseio.com",
+        projectId: "udemyproject-4a959",
+        storageBucket: "udemyproject-4a959.appspot.com",
+        messagingSenderId: "1017001803472"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+      //const settings = { timestampsInSnapshots: true };
+    // db.settings(settings);
+    </script>
+    
+    </script>
+
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="index.js"></script>
+    <script src="graph.js"></script>
+    
+</body>
+</html>
